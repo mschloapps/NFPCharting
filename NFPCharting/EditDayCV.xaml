@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NFPCharting.EditDayCV"
+             xmlns:i18n="clr-namespace:NFPCharting.Helpers"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <StackLayout x:Name="main_slayout" Orientation="Vertical" Padding="2,2,2,2">
+        <StackLayout Orientation="Vertical">
+            <!--<StackLayout.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+            </StackLayout.GestureRecognizers>-->
+            <StackLayout Orientation="Horizontal" IsVisible="False">
+                <Label Text="{i18n:Translate CycleIDLabel}" FontSize="Micro" HorizontalOptions="Start" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <Label x:Name="cycle_id" FontSize="Micro" TextColor="{DynamicResource PrimaryTextColor}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <!--<Button Image="arrow_back.png" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="Start" Clicked="BackwardClicked"/>-->
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" >
+                    <Label x:Name="cycle_day" HorizontalTextAlignment="Center" FontSize="Large" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Label x:Name="date_field"  HorizontalTextAlignment="Center" FontSize="Large" TextColor="{DynamicResource PrimaryTextColor}"/>
+                </StackLayout>
+                <!--<Button Image="arrow_forward.png" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="Start" Clicked="ForwardClicked"/>-->
+            </StackLayout>
+            <Frame BorderColor="{DynamicResource PrimaryTextColor}" Padding="2" HorizontalOptions="Center" HasShadow="True">
+                <Grid x:Name="stamp_grid" HorizontalOptions="Center" BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="stamp_view" Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" WidthRequest="60" HeightRequest="90" />
+                    <Label x:Name="stamp_txt" Grid.Row="0" Grid.Column="0" Text="" FontSize="70" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="{DynamicResource IndTextColor}"/>
+                    <Label x:Name="ind_txt" Grid.Row="0" Grid.Column="0" Text="" FontSize="Micro" HorizontalTextAlignment="Center" VerticalTextAlignment="End" HorizontalOptions="FillAndExpand" TextColor="{DynamicResource IndTextColor}"/>
+                </Grid>
+            </Frame>
+            <Button x:Name="update_btn" Text="{i18n:Translate UpdateLabel}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Update_Clicked"/>
+        </StackLayout>
+        <ScrollView x:Name="scroll_view" Orientation="Vertical">
+            <StackLayout Padding="2" Spacing="2">
+                <Grid HorizontalOptions="CenterAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="red_view" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="RedView_Clicked"/>
+                    <Button x:Name="green_view" Grid.Row="0" Grid.Column="1" BackgroundColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="GreenView_Clicked"/>
+                    <Button x:Name="ltgray_view" Grid.Row="0" Grid.Column="2" BackgroundColor="LightGray" Clicked="LightGrayView_Clicked" BorderWidth="0" BorderColor="Black"/>
+                    <Button x:Name="ltgreen_view" Grid.Row="0" Grid.Column="3" BackgroundColor="LightGreen" Clicked="LightGreenView_Clicked"/>
+                    <Button x:Name="yellow_view" Grid.Row="0" Grid.Column="4" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="YellowView_Clicked"/>
+                </Grid>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate MenstrualLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Picker x:Name="men_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="Menstrual_SelectedIndexChanged">
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate IndicatorLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Picker x:Name="ind1_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="Indicator_SelectedIndexChanged">
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate ColorLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Picker x:Name="ind2_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="Indicator_SelectedIndexChanged">
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate SensationLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Picker x:Name="ind3_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="Indicator_SelectedIndexChanged">
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate FrequencyLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Picker x:Name="freq_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="Frequency_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>N/A</x:String>
+                                <x:String>X1</x:String>
+                                <x:String>X2</x:String>
+                                <x:String>X3</x:String>
+                                <x:String>AD</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate PeakLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Picker x:Name="pk_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="Peak_SelectedIndexChanged">
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate DayCountLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Picker x:Name="dcnt_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="DayCount_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>0</x:String>
+                                <x:String>1</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{i18n:Translate IntercourseLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Picker x:Name="int_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="Intercourse_SelectedIndexChanged">
+                    </Picker>
+                </StackLayout>
+                <Label Text="{i18n:Translate NotesLabel}" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" FontSize="Small" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <Editor x:Name="note_edit" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" FontSize="Small" AutoSize="TextChanges" TextColor="{DynamicResource PrimaryTextColor}"/>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

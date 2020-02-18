@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="NFPCharting.Themes.LightTheme">
+
+    <Color x:Key="PageBackgroundColor">White</Color>    
+    <Color x:Key="PrimaryTextColor">Black</Color>
+    <Color x:Key="IndTextColor">Black</Color>
+    <Style x:Key="ForwardArrowStyle" TargetType="Button">
+        <Setter Property="ImageSource" Value="arrow_forward_black.png"/>
+    </Style>
+    <Style x:Key="BackArrowStyle" TargetType="Button">
+        <Setter Property="ImageSource" Value="arrow_back_black.png"/>
+    </Style>
+
+</ResourceDictionary>

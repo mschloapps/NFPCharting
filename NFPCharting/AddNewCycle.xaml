@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NFPCharting.AddNewCycle"
+             xmlns:i18n="clr-namespace:NFPCharting.Helpers"
+             Title="{i18n:Translate AddNewCycleLabel}"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{i18n:Translate StartingDateLabel}" VerticalOptions="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <DatePicker x:Name="cydatePicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{i18n:Translate NumDaysLabel}" VerticalOptions="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <Entry x:Name="numdaysEntry" Keyboard="Numeric" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+            </StackLayout>
+            <Button x:Name="addCycleBtn" Text="{i18n:Translate AddLabel}" HorizontalOptions="CenterAndExpand" Clicked="addCycleBtn_Clicked"/>            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

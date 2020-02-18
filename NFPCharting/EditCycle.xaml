@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NFPCharting.EditCycle"
+             xmlns:i18n="clr-namespace:NFPCharting.Helpers"
+             Title="{i18n:Translate ModCycleLabel}"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{i18n:Translate CurrNumLabel}" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <Label x:Name="cur_numdays" TextColor="{DynamicResource PrimaryTextColor}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{i18n:Translate NewNumLabel}" VerticalOptions="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <Entry x:Name="numdaysEntry" Keyboard="Numeric" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+            </StackLayout>
+            <Button x:Name="modifyCycleBtn" Text="{i18n:Translate ModifyLabel}" HorizontalOptions="CenterAndExpand" Clicked="modifyCycleBtn_Clicked"/>
+            <Label Text="{i18n:Translate ModNoteLabel}" HorizontalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

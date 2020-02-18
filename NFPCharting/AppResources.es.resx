@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MenstrualLabel" xml:space="preserve">
+    <value>Menstrual:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="IndicatorLabel" xml:space="preserve">
+    <value>Indicador:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="ColorLabel" xml:space="preserve">
+    <value>Color:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="SensationLabel" xml:space="preserve">
+    <value>Sensación:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="FrequencyLabel" xml:space="preserve">
+    <value>Frecuencia:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="PeakLabel" xml:space="preserve">
+    <value>Máximo:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="DayCountLabel" xml:space="preserve">
+    <value>Cuenta de los días:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="IntercourseLabel" xml:space="preserve">
+    <value>Relación sexual:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="NotesLabel" xml:space="preserve">
+    <value>Notas:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="UpdateLabel" xml:space="preserve">
+    <value>Actualización</value>
+    <comment>label for button</comment>
+  </data>
+  <data name="ShowLabel" xml:space="preserve">
+    <value>Ver</value>
+    <comment>label for button, changed 2.1.0</comment>
+  </data>
+  <data name="SendLabel" xml:space="preserve">
+    <value>Compartir</value>
+    <comment>label for button, changed 2.1.0</comment>
+  </data>
+  <data name="StampLabel" xml:space="preserve">
+    <value>Estampilla</value>
+    <comment>label</comment>
+  </data>
+  <data name="EditDayLabel" xml:space="preserve">
+    <value>Editar Día</value>
+    <comment>label for tab</comment>
+  </data>
+  <data name="EditCyclesLabel" xml:space="preserve">
+    <value>Editar Ciclos</value>
+    <comment>label for tab</comment>
+  </data>
+  <data name="ViewCyclesLabel" xml:space="preserve">
+    <value>Ver / Compartir</value>
+    <comment>label for tab, changed 2.1.0</comment>
+  </data>
+  <data name="ViewingCyclesLabel" xml:space="preserve">
+    <value>Ver / Compartir Ciclos</value>
+    <comment>label for tab, chagned 2.1.0</comment>
+  </data>
+  <data name="CyclesLabel" xml:space="preserve">
+    <value>Ciclos</value>
+    <comment>label</comment>
+  </data>
+  <data name="CyclesToDisplayLabel" xml:space="preserve">
+    <value>Ciclos para mostrar:</value>
+    <comment>label</comment>
+  </data>
+  <data name="AddNewCycleLabel" xml:space="preserve">
+    <value>Añadir un ciclo nuevo</value>
+    <comment>label</comment>
+  </data>
+  <data name="AddLabel" xml:space="preserve">
+    <value>Añadir</value>
+    <comment>label for button</comment>
+  </data>
+  <data name="StartingDateLabel" xml:space="preserve">
+    <value>Día Inicial:</value>
+    <comment>label</comment>
+  </data>
+  <data name="CycleStartDateLabel" xml:space="preserve">
+    <value>Día inicial de ciclo: </value>
+    <comment>label</comment>
+  </data>
+  <data name="CurrentCycleLabel" xml:space="preserve">
+    <value>Ciclo actual?: </value>
+    <comment>label</comment>
+  </data>
+  <data name="YesLabel" xml:space="preserve">
+    <value>Sí</value>
+    <comment>label</comment>
+  </data>
+  <data name="NoLabel" xml:space="preserve">
+    <value>No</value>
+    <comment>label</comment>
+  </data>
+  <data name="CycleIDLabel" xml:space="preserve">
+    <value>ID del ciclo: </value>
+    <comment>label</comment>
+  </data>
+  <data name="DatabaseUpdateLabel" xml:space="preserve">
+    <value>Actualización del base de datos</value>
+    <comment>label</comment>
+  </data>
+  <data name="AlertLabel" xml:space="preserve">
+    <value>Alerta</value>
+    <comment>label</comment>
+  </data>
+  <data name="UpdateErrorLabel" xml:space="preserve">
+    <value>Problema actualizando la data. Se olvidó añadir un ciclo?</value>
+    <comment>label</comment>
+  </data>
+  <data name="UpdateSuccessLabel" xml:space="preserve">
+    <value>Se ha actualizado el ciclo.</value>
+    <comment>label</comment>
+  </data>
+  <data name="OKLabel" xml:space="preserve">
+    <value>OK</value>
+    <comment>label</comment>
+  </data>
+  <data name="AddCycleSuccessLabel" xml:space="preserve">
+    <value>Nuevo ciclo se ha añadido.</value>
+    <comment>label</comment>
+  </data>
+  <data name="AddCycleErrorLabel" xml:space="preserve">
+    <value>No logró añadir un ciclo nuevo. Fecha de comenzar ya existe.</value>
+    <comment>label</comment>
+  </data>
+  <data name="SendErrorLabel" xml:space="preserve">
+    <value>Error mandando in email. Se necesita un email estándar para usar esta herramienta.</value>
+    <comment>label</comment>
+  </data>
+  <data name="DeleteErrorLabel" xml:space="preserve">
+    <value>Error borrando ciclo.</value>
+    <comment>label</comment>
+  </data>
+  <data name="DeleteSuccessLabel" xml:space="preserve">
+    <value>Ciclo y data se borraron.</value>
+    <comment>label</comment>
+  </data>
+  <data name="AddCycleButtonLabel" xml:space="preserve">
+    <value>Añadir un ciclo nuevo usando el botón +.</value>
+    <comment>label</comment>
+  </data>
+  <data name="EmailSubjectLabel" xml:space="preserve">
+    <value>Gráfica de NFP</value>
+    <comment>label</comment>
+  </data>
+  <data name="EmailBodyLabel" xml:space="preserve">
+    <value>Mandando gráfica de NFP</value>
+    <comment>label</comment>
+  </data>
+  <data name="ImportExportLabel" xml:space="preserve">
+    <value>Copia de seguridad de la base de datos</value>
+    <comment>label for tab, changed 2.1.0</comment>
+  </data>
+  <data name="ImportLabel" xml:space="preserve">
+    <value>Importar</value>
+    <comment>label</comment>
+  </data>
+  <data name="ExportLabel" xml:space="preserve">
+    <value>Exportar</value>
+    <comment>label</comment>
+  </data>
+  <data name="ExportSubjectLabel" xml:space="preserve">
+    <value>Exportación del base de datos NFP</value>
+    <comment>label</comment>
+  </data>
+  <data name="ExportBodyLabel" xml:space="preserve">
+    <value>Enviando el base de datos NFP</value>
+    <comment>label</comment>
+  </data>
+  <data name="ImportErrorLabel" xml:space="preserve">
+    <value>Error introduciendo el base de datos</value>
+    <comment>label</comment>
+  </data>
+  <data name="ImportNote" xml:space="preserve">
+    <value>Se debe cerrar la aplicación y reiniciarla para actualizar los cambios.</value>
+    <comment>label</comment>
+  </data>
+  <data name="ImportErrorPermissionsAndroid" xml:space="preserve">
+    <value>Se debe activar el permiso almacenamiento para usar esta herramienta. Toggle: Settings&gt;Apps&gt;NFP Charting&gt;Permissions&gt;Storage</value>
+    <comment>label</comment>
+  </data>
+  <data name="ImportErrorPermissionsApple" xml:space="preserve">
+    <value>Se debe activar iCloud para usar esta herramienta.</value>
+    <comment>label</comment>
+  </data>
+  <data name="ImportExportBaseLabel" xml:space="preserve">
+    <value>Apoyo</value>
+    <comment>label, changed 2.1.0</comment>
+  </data>
+  <data name="ImportErrorDBLabel" xml:space="preserve">
+    <value>Error introduciendo el base de datos. El archivo seleccionado no era un archivo de base de datos NFP.</value>
+    <comment>label</comment>
+  </data>
+  <data name="BColor" xml:space="preserve">
+    <value>B - Marrón (o negro)</value>
+    <comment>label</comment>
+  </data>
+  <data name="BMenstrual" xml:space="preserve">
+    <value>B - Marrón (o negro)</value>
+    <comment>label</comment>
+  </data>
+  <data name="CColor" xml:space="preserve">
+    <value>C - Nublado (blanco)</value>
+    <comment>label</comment>
+  </data>
+  <data name="CKColor" xml:space="preserve">
+    <value>CK - Nublado / Claro</value>
+    <comment>label</comment>
+  </data>
+  <data name="EightIndicator" xml:space="preserve">
+    <value>8 - pegajoso (1.0-2.0 cm)</value>
+    <comment>label</comment>
+  </data>
+  <data name="FourIndicator" xml:space="preserve">
+    <value>4 - Brillante sin lubricación</value>
+    <comment>label</comment>
+  </data>
+  <data name="GColor" xml:space="preserve">
+    <value>G - gomoso</value>
+    <comment>label</comment>
+  </data>
+  <data name="GSensation" xml:space="preserve">
+    <value>G - gomoso</value>
+    <comment>label</comment>
+  </data>
+  <data name="HMenstrual" xml:space="preserve">
+    <value>H - Flujo pesado</value>
+    <comment>label</comment>
+  </data>
+  <data name="KColor" xml:space="preserve">
+    <value>K - Claro</value>
+    <comment>label</comment>
+  </data>
+  <data name="LMenstrual" xml:space="preserve">
+    <value>L - Flujo de luz</value>
+    <comment>label</comment>
+  </data>
+  <data name="LSensation" xml:space="preserve">
+    <value>L - Lubricante</value>
+    <comment>label</comment>
+  </data>
+  <data name="MMenstrual" xml:space="preserve">
+    <value>M - Flujo moderado</value>
+    <comment>label</comment>
+  </data>
+  <data name="NALabel" xml:space="preserve">
+    <value>N/A</value>
+    <comment>label</comment>
+  </data>
+  <data name="PColor" xml:space="preserve">
+    <value>P - Pasty</value>
+    <comment>label</comment>
+  </data>
+  <data name="PSensation" xml:space="preserve">
+    <value>P - Pasty</value>
+    <comment>label</comment>
+  </data>
+  <data name="SixIndicator" xml:space="preserve">
+    <value>6 - Pegajoso (0.5 cm)</value>
+    <comment>label</comment>
+  </data>
+  <data name="TenDLIndicator" xml:space="preserve">
+    <value>10DL - Humedad c / lubricación</value>
+    <comment>label</comment>
+  </data>
+  <data name="TenIndicator" xml:space="preserve">
+    <value>10 - Elástico (2.5+ cm)</value>
+    <comment>label</comment>
+  </data>
+  <data name="TenSLIndicator" xml:space="preserve">
+    <value>10SL - Brillante con lubricación</value>
+    <comment>label</comment>
+  </data>
+  <data name="TenWLIndicator" xml:space="preserve">
+    <value>10WL - Mojado con lubricación</value>
+    <comment>label</comment>
+  </data>
+  <data name="TwoIndicator" xml:space="preserve">
+    <value>2 - Humedad sin lubricación</value>
+    <comment>label</comment>
+  </data>
+  <data name="TwoWIndicator" xml:space="preserve">
+    <value>2W - Mojado sin lubricación</value>
+    <comment>label</comment>
+  </data>
+  <data name="VLMenstrual" xml:space="preserve">
+    <value>VL - Flujo muy ligero</value>
+    <comment>label</comment>
+  </data>
+  <data name="YColor" xml:space="preserve">
+    <value>Y - Amarillo</value>
+    <comment>label</comment>
+  </data>
+  <data name="ZeroIndicator" xml:space="preserve">
+    <value>0 - Seco</value>
+    <comment>label</comment>
+  </data>
+  <data name="DeleteLabel" xml:space="preserve">
+    <value>Borrar</value>
+    <comment>label</comment>
+  </data>
+  <data name="ImportExportOptions" xml:space="preserve">
+    <value>Esta página se utiliza para hacer una copia de seguridad de sus datos.
+
+Use el botón "Importar" para cargar un archivo de base de datos (.db) previamente guardado.
+
+Use el botón "Exportar" para guardar el archivo de base de datos actual o compartirlo con otra persona que use esta aplicación.
+
+NOTA: El archivo que se exporta / guarda con esta función es un archivo de datos sin procesar y no un archivo visible para el usuario.</value>
+    <comment>label, changed 2.1.0</comment>
+  </data>
+  <data name="ViewOptions" xml:space="preserve">
+    <value>Esta página se usa para ver y compartir su gráfico.
+
+Use el botón "Ver" para ver su gráfico en su dispositivo en esta aplicación.
+
+Use el botón "Compartir" para enviarse el gráfico a usted mismo u otra persona como un archivo HTML, que puede verse o imprimirse desde un navegador web.</value>
+    <comment>label, changed 2.1.0</comment>
+  </data>
+  <data name="CurrNumLabel" xml:space="preserve">
+    <value>Número actual de días:</value>
+    <comment>label</comment>
+  </data>
+  <data name="CycleModErrorLabel" xml:space="preserve">
+    <value>Error al modificar el ciclo.</value>
+    <comment>label</comment>
+  </data>
+  <data name="CycleModifiedLabel" xml:space="preserve">
+    <value>Ciclo modificado</value>
+    <comment>label</comment>
+  </data>
+  <data name="ModCycleLabel" xml:space="preserve">
+    <value>Modificar ciclo</value>
+    <comment>label</comment>
+  </data>
+  <data name="ModifyLabel" xml:space="preserve">
+    <value>Modificar</value>
+    <comment>label</comment>
+  </data>
+  <data name="ModNoteLabel" xml:space="preserve">
+    <value>Nota: Si el nuevo número de días es más corto, los datos almacenados para los días eliminados se eliminarán de forma permanente.</value>
+    <comment>label</comment>
+  </data>
+  <data name="NewNumLabel" xml:space="preserve">
+    <value>Nuevo número de días:</value>
+    <comment>label</comment>
+  </data>
+  <data name="NumDaysLabel" xml:space="preserve">
+    <value>Número de días en el ciclo:</value>
+    <comment>label</comment>
+  </data>
+  <data name="TooFewDaysLabel" xml:space="preserve">
+    <value>El número de días debe ser 1 o más.</value>
+    <comment>label, changed 2.1.0</comment>
+  </data>
+  <data name="TooManyDaysLabel" xml:space="preserve">
+    <value>El número de días debe ser 365 o menos.</value>
+    <comment>label</comment>
+  </data>
+  <data name="EditLabel" xml:space="preserve">
+    <value>Editar</value>
+    <comment>label</comment>
+  </data>
+  <data name="DeletePrompt" xml:space="preserve">
+    <value>¿Seguro que quieres borrar este ciclo?</value>
+    <comment>label</comment>
+  </data>
+  <data name="DeleteQLabel" xml:space="preserve">
+    <value>¿Borrar?</value>
+    <comment>label</comment>
+  </data>
+</root>

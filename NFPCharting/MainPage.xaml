@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NFPCharting"
+             xmlns:i18n="clr-namespace:NFPCharting.Helpers"
+             x:Class="NFPCharting.MainPage"
+             x:Name="Tabs"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+
+
+    <local:EditDay x:Name="crPage" Title="{i18n:Translate EditDayLabel}" Icon="cycles.png"/>
+
+    <NavigationPage x:Name="cycleListViews" Title="{i18n:Translate EditCyclesLabel}" Icon="list.png" BackgroundColor="{DynamicResource PageBackgroundColor}">
+        <x:Arguments>
+            <local:CycleList />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage x:Name="cycleViewTab" Title="{i18n:Translate ViewCyclesLabel}" Icon="chart.png" BackgroundColor="{DynamicResource PageBackgroundColor}">
+        <x:Arguments>
+            <local:CycleViewOptions />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage x:Name="importExportTab" Title="{i18n:Translate ImportExportBaseLabel}" Icon="backup.png" BackgroundColor="{DynamicResource PageBackgroundColor}">
+        <x:Arguments>
+            <local:InputOutput />
+        </x:Arguments>
+    </NavigationPage>    
+    
+
+</TabbedPage>

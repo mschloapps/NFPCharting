@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NFPCharting.CycleList"
+             xmlns:i18n="clr-namespace:NFPCharting.Helpers"
+             Title="{i18n:Translate CyclesLabel}"
+             x:Name="cylist"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="add.png" Clicked="AddNewCycle"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="listView" HasUnevenRows="true" ItemSelected="Handle_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="deleteItem" CommandParameter="{Binding Source={x:Reference cyID}, Path=Text}" Text="{i18n:Translate DeleteLabel}" IsDestructive="True" />
+                            <MenuItem Clicked="editItem" CommandParameter="{Binding Source={x:Reference cyID}, Path=Text}" Text="{i18n:Translate EditLabel}" IsDestructive="false"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                            <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label x:Name="cyID" IsVisible="False" Text="{Binding CycleID}" TextColor="{DynamicResource PrimaryTextColor}"/>
+                                    <Label Text="{i18n:Translate CycleStartDateLabel}" FontSize="Medium" VerticalTextAlignment="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+                                    <Label x:Name="startDate" Text="{Binding StartingDate}" VerticalTextAlignment="Center" FontSize="Medium" TextColor="{DynamicResource PrimaryTextColor}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{i18n:Translate CurrentCycleLabel}" FontSize="Small" VerticalTextAlignment="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+                                    <Label x:Name="currentCycleView" Text="{Binding IsCurrentTxt}" VerticalTextAlignment="Center" FontSize="Small" TextColor="{DynamicResource PrimaryTextColor}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{i18n:Translate NumDaysLabel}" FontSize="Small" VerticalTextAlignment="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+                                    <Label x:Name="numDaysView" Text="{Binding NumDays}" VerticalTextAlignment="Center" FontSize="Small" TextColor="{DynamicResource PrimaryTextColor}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

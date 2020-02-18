@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NFPCharting.CycleViewOptions"
+             xmlns:i18n="clr-namespace:NFPCharting.Helpers"
+             Title="{i18n:Translate ViewCyclesLabel}"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <Label Text="{i18n:Translate CyclesToDisplayLabel}" VerticalOptions="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <Picker x:Name="numCyclesToDisplay" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1</x:String>
+                            <x:String>3</x:String>
+                            <x:String>6</x:String>
+                            <x:String>12</x:String>
+                            <x:String>24</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="show_btn" Text="{i18n:Translate ShowLabel}" HorizontalOptions="CenterAndExpand" Clicked="Show_Clicked"/>
+                <Button x:Name="send_btn" Text="{i18n:Translate SendLabel}" HorizontalOptions="CenterAndExpand" Clicked="Share_Clicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Padding="10">
+                <Label LineBreakMode="WordWrap" Text="{i18n:Translate ViewOptions}" TextColor="{DynamicResource PrimaryTextColor}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
