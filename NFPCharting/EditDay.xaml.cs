@@ -144,6 +144,7 @@ namespace NFPCharting
 
         void ForwardClicked(object sender, EventArgs e)
         {
+            Update_Clicked(sender, e);
             var converter = new ColorTypeConverter();            
             curday += 1;
             if (curday > cycle[0].NumDays)
@@ -163,6 +164,7 @@ namespace NFPCharting
 
         void BackwardClicked(object sender, EventArgs e)
         {
+            Update_Clicked(sender, e);
             var converter = new ColorTypeConverter();            
             curday -= 1;
             if (curday == 0)
@@ -180,6 +182,7 @@ namespace NFPCharting
 
         void OnSwiped(object sender, SwipedEventArgs e)
         {
+            Update_Clicked(sender, e);
             var converter = new ColorTypeConverter();            
             switch (e.Direction)
             {
@@ -269,6 +272,13 @@ namespace NFPCharting
             img = 0;
         }
 
+        void BabyView_Clicked(object sender, System.EventArgs e)
+        {
+            stamp_view.Source = "baby_small.png";
+            stampSelect = 1;
+            img = 1;
+        }
+
         void Menstrual_SelectedIndexChanged(object sender, System.EventArgs e)
         {            
             GuessStamp();
@@ -317,7 +327,17 @@ namespace NFPCharting
                 bool res = App.Database.UpdateNFPData(dateTime.ToString("yyyy-MM-dd"), men_sel.SelectedIndex, ind1_sel.SelectedIndex, ind2_sel.SelectedIndex, ind3_sel.SelectedIndex, freq_sel.SelectedIndex, pk_sel.SelectedIndex, dcnt_sel.SelectedIndex, int_sel.SelectedIndex, note_edit.Text, stampColor, stampSelect, img, Int32.Parse(cycle_day.Text), Int32.Parse(cycle_id.Text));
                 if (res == true)
                 {
-                    DisplayAlert(AppResources.DatabaseUpdateLabel, AppResources.UpdateSuccessLabel, AppResources.OKLabel);
+                    try
+                    {
+                        Button btn = (Button)sender;
+                        if (String.Equals(btn.Text, "Update"))
+                        {
+                            DisplayAlert(AppResources.DatabaseUpdateLabel, AppResources.UpdateSuccessLabel, AppResources.OKLabel);
+                        }
+                    } catch
+                    {
+                        // Do nothing if arrow buttons or swipe action.
+                    }                    
                 }
                 else
                 {
@@ -465,22 +485,7 @@ namespace NFPCharting
             catch
             {
 
-            }
-
-            /*
-            try
-            {
-                if (stampSelect == 1)
-                {
-                    var converter = new ColorTypeConverter();
-                    stamp_view.BackgroundColor = (Color)converter.ConvertFromInvariantString(stampColor);
-                }
-            }
-            catch
-            {
-
-            }
-            */
+            }            
             
         }
     }

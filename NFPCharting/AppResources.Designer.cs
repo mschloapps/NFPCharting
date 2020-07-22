@@ -70,7 +70,7 @@ namespace NFPCharting {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to add new cycle, starting date already exists..
+        ///   Looks up a localized string similar to Failed to add new cycle, start date already exists..
         /// </summary>
         internal static string AddCycleErrorLabel {
             get {
@@ -174,6 +174,15 @@ namespace NFPCharting {
         internal static string CurrNumLabel {
             get {
                 return ResourceManager.GetString("CurrNumLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Start Date:.
+        /// </summary>
+        internal static string CurrStartLabel {
+            get {
+                return ResourceManager.GetString("CurrStartLabel", resourceCulture);
             }
         }
         
@@ -318,6 +327,15 @@ namespace NFPCharting {
         internal static string EditLabel {
             get {
                 return ResourceManager.GetString("EditLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to update cycle, start date already exists..
+        /// </summary>
+        internal static string EditStartErrorLabel {
+            get {
+                return ResourceManager.GetString("EditStartErrorLabel", resourceCulture);
             }
         }
         
@@ -616,6 +634,15 @@ namespace NFPCharting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New Start Date:.
+        /// </summary>
+        internal static string NewStartLabel {
+            get {
+                return ResourceManager.GetString("NewStartLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No.
         /// </summary>
         internal static string NoLabel {
@@ -733,7 +760,7 @@ namespace NFPCharting {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Starting Date:.
+        ///   Looks up a localized string similar to Start Date:.
         /// </summary>
         internal static string StartingDateLabel {
             get {

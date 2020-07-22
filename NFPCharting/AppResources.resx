@@ -202,7 +202,7 @@
     <comment>label for button</comment>
   </data>
   <data name="StartingDateLabel" xml:space="preserve">
-    <value>Starting Date:</value>
+    <value>Start Date:</value>
     <comment>label</comment>
   </data>
   <data name="CycleStartDateLabel" xml:space="preserve">
@@ -250,7 +250,7 @@
     <comment>label</comment>
   </data>
   <data name="AddCycleErrorLabel" xml:space="preserve">
-    <value>Failed to add new cycle, starting date already exists.</value>
+    <value>Failed to add new cycle, start date already exists.</value>
     <comment>label</comment>
   </data>
   <data name="SendErrorLabel" xml:space="preserve">
@@ -497,6 +497,18 @@ Use the "Share" button to send the chart to yourself or another person as an HTM
   </data>
   <data name="DeleteQLabel" xml:space="preserve">
     <value>Delete?</value>
+    <comment>label</comment>
+  </data>
+  <data name="CurrStartLabel" xml:space="preserve">
+    <value>Current Start Date:</value>
+    <comment>label</comment>
+  </data>
+  <data name="EditStartErrorLabel" xml:space="preserve">
+    <value>Failed to update cycle, start date already exists.</value>
+    <comment>label</comment>
+  </data>
+  <data name="NewStartLabel" xml:space="preserve">
+    <value>New Start Date:</value>
     <comment>label</comment>
   </data>
 </root>

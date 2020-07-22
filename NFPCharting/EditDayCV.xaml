@@ -37,26 +37,28 @@
                 </Grid>
             </Frame>
             <Button x:Name="update_btn" Text="{i18n:Translate UpdateLabel}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Update_Clicked"/>
+            <Grid HorizontalOptions="CenterAndExpand" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="red_view" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="RedView_Clicked"/>
+                <Button x:Name="green_view" Grid.Row="0" Grid.Column="1" BackgroundColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="GreenView_Clicked"/>
+                <Button x:Name="ltgray_view" Grid.Row="0" Grid.Column="2" BackgroundColor="LightGray" Clicked="LightGrayView_Clicked" BorderWidth="0" BorderColor="Black"/>
+                <Button x:Name="ltgreen_view" Grid.Row="0" Grid.Column="3" BackgroundColor="LightGreen" Clicked="LightGreenView_Clicked"/>
+                <Button x:Name="yellow_view" Grid.Row="0" Grid.Column="4" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="YellowView_Clicked"/>
+                <Button x:Name="baby_view" Grid.Row="0" Grid.Column="5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="BabyView_Clicked" BorderWidth="1" BorderColor="#000000" Text="BABY"/>
+            </Grid>
         </StackLayout>
         <ScrollView x:Name="scroll_view" Orientation="Vertical">
             <StackLayout Padding="2" Spacing="2">
-                <Grid HorizontalOptions="CenterAndExpand" >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button x:Name="red_view" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="RedView_Clicked"/>
-                    <Button x:Name="green_view" Grid.Row="0" Grid.Column="1" BackgroundColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="GreenView_Clicked"/>
-                    <Button x:Name="ltgray_view" Grid.Row="0" Grid.Column="2" BackgroundColor="LightGray" Clicked="LightGrayView_Clicked" BorderWidth="0" BorderColor="Black"/>
-                    <Button x:Name="ltgreen_view" Grid.Row="0" Grid.Column="3" BackgroundColor="LightGreen" Clicked="LightGreenView_Clicked"/>
-                    <Button x:Name="yellow_view" Grid.Row="0" Grid.Column="4" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="YellowView_Clicked"/>
-                </Grid>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="{i18n:Translate MenstrualLabel}" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
                     <Picker x:Name="men_sel" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" SelectedIndex="0" SelectedIndexChanged="Menstrual_SelectedIndexChanged">

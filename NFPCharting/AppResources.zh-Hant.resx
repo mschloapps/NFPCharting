@@ -499,4 +499,16 @@
     <value>刪除？</value>
     <comment>label</comment>
   </data>
+  <data name="CurrStartLabel" xml:space="preserve">
+    <value>當前開始日期：</value>
+    <comment>label, added 2.1.3</comment>
+  </data>
+  <data name="EditStartErrorLabel" xml:space="preserve">
+    <value>更新周期失敗，開始日期已經存在。</value>
+    <comment>label, added 2.1.3</comment>
+  </data>
+  <data name="NewStartLabel" xml:space="preserve">
+    <value>新的開始日期：</value>
+    <comment>label, added 2.1.3</comment>
+  </data>
 </root>

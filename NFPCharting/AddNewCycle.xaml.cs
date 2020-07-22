@@ -20,7 +20,7 @@ namespace NFPCharting
             }
 
             cydatePicker.Date = DateTime.Today;
-            numdaysEntry.Text = "40";
+            numdaysEntry.Text = "32";
         }
 
         async private void addCycleBtn_Clicked(object sender, EventArgs e)
