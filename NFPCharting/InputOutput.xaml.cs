@@ -106,6 +106,7 @@ namespace NFPCharting
             }
             catch (Exception ex)
             {
+                //Console.WriteLine(ex);
                 if (ex.GetType() == typeof(System.InvalidOperationException))
                 {
                     if (Device.RuntimePlatform == Device.Android)

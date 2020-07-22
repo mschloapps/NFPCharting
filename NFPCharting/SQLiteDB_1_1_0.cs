@@ -29,7 +29,8 @@ namespace NFPCharting
 
         public List<NFPCycles> GetNFPCyclesASC(int num = 99999)
         {
-            string sql = "SELECT * FROM (SELECT * FROM [NFPCycles] ORDER BY [CycleID] DESC LIMIT ?) sub ORDER BY date([StartingDate]) ASC";
+            //string sql = "SELECT * FROM (SELECT * FROM [NFPCycles] ORDER BY [CycleID] DESC LIMIT ?) sub ORDER BY date([StartingDate]) ASC";
+            string sql = "SELECT * FROM (SELECT * FROM [NFPCycles] ORDER BY date([StartingDate]) DESC LIMIT ?) sub ORDER BY date([StartingDate]) ASC";
             return database.Query<NFPCycles>(sql, num);
         }
 
@@ -150,8 +151,8 @@ namespace NFPCharting
 
         public List<NFPData_1_1_0> GetAllNFPData(int num = 99999)
         {
-            //string sql = "SELECT * FROM [NFPData_1_1_0] ORDER BY [CycleID] DESC, [DayID] ASC";
-            string sql = "SELECT * FROM NFPData_1_1_0 WHERE CycleID IN (SELECT CycleID FROM [NFPCycles] ORDER BY [CycleID] DESC LIMIT ?) ORDER BY [CycleID] ASC, [DayID] ASC";
+            //string sql = "SELECT * FROM NFPData_1_1_0 WHERE CycleID IN (SELECT CycleID FROM [NFPCycles] ORDER BY [CycleID] DESC LIMIT ?) ORDER BY [CycleID] ASC, [DayID] ASC";
+            string sql = "SELECT * FROM NFPData_1_1_0 WHERE CycleID IN (SELECT CycleID FROM [NFPCycles] ORDER BY date([StartingDate]) ASC LIMIT ?) ORDER BY [CycleID] ASC, [DayID] ASC";
             return database.Query<NFPData_1_1_0>(sql, num);
         }
 
@@ -192,13 +193,26 @@ namespace NFPCharting
             database.Query<NFPCycles>(sql, ndays, cyid);
         }
 
+        public void SetStartDate(string dt, int ndays, int cyid)
+        {
+            string sql = "UPDATE [NFPCycles] SET [StartingDate] = ? WHERE [CycleID] = ?";
+            database.Query<NFPCycles>(sql, dt, cyid);
+            DateTime dt1 = DateTime.Parse(dt);
+            sql = "UPDATE [NFPData_1_1_0] SET [Date] = ? WHERE [CycleID] = ? AND [DayID] = ?";
+            for (int i=1; i<=ndays; i++)
+            {
+                DateTime dt2 = dt1.AddDays(i-1);
+                database.Query<NFPData_1_1_0>(sql, dt2.ToString("yyyy-MM-dd"), cyid, i);
+            }
+        }
+
         public string GetStartingDate(int cyid)
         {
             string sql = "SELECT [StartingDate] FROM [NFPCycles] WHERE [CycleID] = ?";
             return database.Query<NFPCycles>(sql, cyid)[0].StartingDate;
         }
 
-        public bool ModifyCycle(int cyid, int dys)
+        public bool ModifyCycle(int cyid, int dys, string sdate)
         {
             try
             {
@@ -245,6 +259,7 @@ namespace NFPCharting
                 }
 
                 SetNumDays(dys, cyid);
+                SetStartDate(sdate, dys, cyid);
 
                 return true;
             }

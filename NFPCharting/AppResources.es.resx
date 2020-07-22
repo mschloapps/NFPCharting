@@ -499,4 +499,16 @@ Use el botón "Compartir" para enviarse el gráfico a usted mismo u otra persona
     <value>¿Borrar?</value>
     <comment>label</comment>
   </data>
+  <data name="CurrStartLabel" xml:space="preserve">
+    <value>Fecha de inicio actual:</value>
+    <comment>label, added 2.1.3</comment>
+  </data>
+  <data name="EditStartErrorLabel" xml:space="preserve">
+    <value>Error al actualizar el ciclo, la fecha de inicio ya existe.</value>
+    <comment>label, added 2.1.3</comment>
+  </data>
+  <data name="NewStartLabel" xml:space="preserve">
+    <value>Nueva fecha de inicio:</value>
+    <comment>label, added 2.1.3</comment>
+  </data>
 </root>

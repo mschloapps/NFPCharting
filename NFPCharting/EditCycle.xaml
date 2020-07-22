@@ -8,8 +8,16 @@
     <ContentPage.Content>
         <StackLayout Padding="5">
             <StackLayout Orientation="Horizontal">
+                <Label Text="{i18n:Translate CurrStartLabel}" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <Label x:Name="cur_startdate" TextColor="{DynamicResource PrimaryTextColor}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
                 <Label Text="{i18n:Translate CurrNumLabel}" TextColor="{DynamicResource PrimaryTextColor}"/>
                 <Label x:Name="cur_numdays" TextColor="{DynamicResource PrimaryTextColor}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{i18n:Translate NewStartLabel}" VerticalOptions="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+                <DatePicker x:Name="newstartPicker" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="{i18n:Translate NewNumLabel}" VerticalOptions="Center" TextColor="{DynamicResource PrimaryTextColor}"/>

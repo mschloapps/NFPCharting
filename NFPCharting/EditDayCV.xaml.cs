@@ -187,6 +187,13 @@ namespace NFPCharting
             img = 0;
         }
 
+        void BabyView_Clicked(object sender, System.EventArgs e)
+        {
+            stamp_view.Source = "baby_small.png";
+            stampSelect = 1;
+            img = 1;
+        }
+
         void Menstrual_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             GuessStamp();
@@ -384,23 +391,7 @@ namespace NFPCharting
             catch
             {
 
-            }
-
-            /*
-            try
-            {
-                if (stampSelect == 1)
-                {
-                    var converter = new ColorTypeConverter();
-                    stamp_view.BackgroundColor = (Color)converter.ConvertFromInvariantString(stampColor);
-                }
-            }
-            catch
-            {
-
-            }
-            */
-
+            }            
 
         }
     }
