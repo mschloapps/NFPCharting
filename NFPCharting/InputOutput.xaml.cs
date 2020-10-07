@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using Plugin.FilePicker;
 using Plugin.FilePicker.Abstractions;
-using Plugin.Messaging;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 

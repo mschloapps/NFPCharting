@@ -15,7 +15,11 @@
                             <x:String>1</x:String>
                             <x:String>3</x:String>
                             <x:String>6</x:String>
+                            <x:String>9</x:String>
                             <x:String>12</x:String>
+                            <x:String>15</x:String>
+                            <x:String>18</x:String>
+                            <x:String>21</x:String>
                             <x:String>24</x:String>
                         </x:Array>
                     </Picker.ItemsSource>

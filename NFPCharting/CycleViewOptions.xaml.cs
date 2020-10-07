@@ -2,8 +2,6 @@
 using System.IO;
 using System.Reflection;
 
-using Plugin.Messaging;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
@@ -83,38 +81,34 @@ namespace NFPCharting
             string imgURL = "data:image/png;base64," + img;
 
             string html = "<!DOCTYPE html><html><body>";
-
-            var data = App.Database.GetAllNFPData(numDispCycles);
-
-            int counter = 0;
-
+                        
             for (int i = 0; i < cycles.Count; i++)
             {
                 html += "<div style=\"height:95px;width:2700px;border-style:solid;border-width:1px;white-space:nowrap\">";
-                //var data = App.Database.GetNFPData(cycles[i].CycleID);
+                var data = App.Database.GetNFPData(cycles[i].CycleID);
                 for (int j = 0; j < cycles[i].NumDays; j++)
                 {
-                    html += "<div style=\"width:65px;height:95px;border-style:solid;border-width:1px;float:left;background-color:" + data[counter].Color;
-                    if (data[counter].Image == 1)
+                    html += "<div style=\"width:65px;height:95px;border-style:solid;border-width:1px;float:left;background-color:" + data[j].Color;
+                    if (data[j].Image == 1)
                     {
                         html += ";background-repeat:no-repeat;background-position:center;background-size:35px 55px;";
                         html += "background-image:url('" + imgURL + "')";
                     }
-                    html += "\" title=\"" + data[counter].Notes + "\">";                    
-                    html += "<div style=\"text-align:center;font-size:9px;\">" + data[counter].DayID + "</div>";
+                    html += "\" title=\"" + data[j].Notes + "\">";                    
+                    html += "<div style=\"text-align:center;font-size:9px;\">" + data[j].DayID + "</div>";
 
                     //var dateTime = DateTime.Parse(data[j].Date);
                     //var date_field = dateTime.ToString("d");
 
-                    html += "<div style=\"text-align:center;font-size:9px;\">" + data[counter].Date + "</div>";
+                    html += "<div style=\"text-align:center;font-size:9px;\">" + data[j].Date + "</div>";
                     html += "<div style=\"text-align:center;font-size:50px;height:60px;\">";
-                    if (data[counter].Peak == 1)
+                    if (data[j].Peak == 1)
                     {
                         html += "P";
                     }
-                    else if (data[counter].DayCount > 0)
+                    else if (data[j].DayCount > 0)
                     {
-                        html += data[counter].DayCount.ToString();
+                        html += data[j].DayCount.ToString();
                     }
                     else
                     {
@@ -123,38 +117,37 @@ namespace NFPCharting
                     html += "</div>";
 
                     html += "<div style=\"text-align:center;font-size:9px;\">";
-                    if (data[counter].Menstrual > 0)
+                    if (data[j].Menstrual > 0)
                     {
-                        html += Menstruals[data[counter].Menstrual];
+                        html += Menstruals[data[j].Menstrual];
                     }
-                    if (data[counter].Indicator_1 > 0 && data[counter].Menstrual > 0)
+                    if (data[j].Indicator_1 > 0 && data[j].Menstrual > 0)
                     {
-                        html += ";" + Indicators1[data[counter].Indicator_1];
+                        html += ";" + Indicators1[data[j].Indicator_1];
                     }
-                    else if (data[counter].Indicator_1 > 0)
+                    else if (data[j].Indicator_1 > 0)
                     {
-                        html += Indicators1[data[counter].Indicator_1];
+                        html += Indicators1[data[j].Indicator_1];
                     }
-                    if (data[counter].Indicator_2 > 0)
+                    if (data[j].Indicator_2 > 0)
                     {
-                        html += Indicators2[data[counter].Indicator_2];
+                        html += Indicators2[data[j].Indicator_2];
                     }
-                    if (data[counter].Indicator_3 > 0)
+                    if (data[j].Indicator_3 > 0)
                     {
-                        html += Indicators3[data[counter].Indicator_3];
+                        html += Indicators3[data[j].Indicator_3];
                     }
-                    if (data[counter].Frequency > 0)
+                    if (data[j].Frequency > 0)
                     {
-                        html += "-" + Frequencies[data[counter].Frequency];
+                        html += "-" + Frequencies[data[j].Frequency];
                     }
 
-                    if (data[counter].Intercourse == 1)
+                    if (data[j].Intercourse == 1)
                     {
                         html += "<span style=\"font-size:12px;font-weight:bold;float:right;padding-right:10px;\">I</span>";
                     }
                     html += "</div>";
-                    html += "</div>";
-                    counter++;
+                    html += "</div>";                    
 
                 }
                 html += "</div>";
@@ -165,6 +158,7 @@ namespace NFPCharting
             return html;
         }
 
+        /*
         void Send_Clicked(object sender, System.EventArgs e)
         {
 
@@ -192,6 +186,7 @@ namespace NFPCharting
                 DisplayAlert(AppResources.AlertLabel, AppResources.SendErrorLabel, AppResources.OKLabel);
             }
         }
+        */
 
         async void Share_Clicked(object sender, System.EventArgs e)
         {

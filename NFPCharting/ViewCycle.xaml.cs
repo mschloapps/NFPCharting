@@ -101,8 +101,6 @@ namespace NFPCharting
 
             //var data = App.Database.GetAllNFPData(numDispCycles);
 
-            int counter = 0;
-
             for (int i = 0; i < cycles.Count; i++)
             {
                 html += "<div style=\"height:95px;width:2700px;border-style:solid;border-width:1px;white-space:nowrap\">";
@@ -169,8 +167,7 @@ namespace NFPCharting
                         html += "<span style=\"font-size:12px;font-weight:bold;float:right;padding-right:10px;\">I</span>";
                     }
                     html += "</div>";
-                    html += "</div></a>";
-                    counter++;
+                    html += "</div></a>";                    
                 }
                 html += "</div>";                
             }

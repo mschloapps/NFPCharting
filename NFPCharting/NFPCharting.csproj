@@ -75,7 +75,6 @@
     <None Remove="baby.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xam.Plugins.Messaging" Version="5.2.0" />
     <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xam.Plugins.Notifier" Version="3.0.1" />
