@@ -6,6 +6,7 @@ using System.Text;
 using Foundation;
 using UIKit;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 [assembly: ExportRenderer(typeof(DatePicker), typeof(NFPCharting.iOS.Renderers.DatePickerRenderer))]
 namespace NFPCharting.iOS.Renderers
@@ -14,14 +15,21 @@ namespace NFPCharting.iOS.Renderers
 	{
 		protected override void OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs<DatePicker> e)
 		{
+			
 			base.OnElementChanged(e);
+			//Console.WriteLine(Xamarin.Essentials.DeviceInfo.Version);
 
 			if (Control != null)
 			{
 				UITextField entry = Control;
 				UIDatePicker picker = (UIDatePicker)entry.InputView;
-				picker.PreferredDatePickerStyle = UIDatePickerStyle.Wheels;
-			}
+				if (DeviceInfo.Version.Major >= 14)
+                {
+					picker.PreferredDatePickerStyle = UIDatePickerStyle.Wheels;
+				}
+					
+			}			
+				
 		}
 	}
 }
