@@ -12,6 +12,6 @@ Going forward, the legacy app will be available here:
 - Android .apk of the latest version is included in the repo
 
 # Privacy Policy:
-This app stores NFP charting information locally on the users device. This information is not automatically transmitted to any server or third party.  Any sharing of NFP charting data is entirely optional and must be initiated by the user. This app does not collect any other personal information, and does not share any information with any third party under any circumstance. 
+This app stores NFP charting information locally on the users device. This information is not automatically transmitted to any server or third party by this app.  Any sharing of NFP charting data is entirely optional and must be initiated by the user. The use of built-in device backup features of Apple, Google, or some other third party backup service will also backup this apps data to that service's servers. Please review the privacy policy of any backup service you use. This app does not collect any personal information, and does not share any information with any third party under any circumstance. 
 No user account, name, email address, or other personally identifiable information is required to use this app.   
 This app does not engage in ad targeting, data mining, or other activities that would compromise your privacy.
